@@ -171,8 +171,11 @@ This project uses the publicly available **[TMDB 5000 Movie Dataset](https://www
 ## 👩‍💻 Author
 
 **Mallareddygari Gayathri**
+
 Data Analyst | AI/ML Engineering Graduate
+
 📍 Bangalore, India
+
 🔗 [GitHub](https://github.com/Gayathri-Reddy874)
 
 ---
