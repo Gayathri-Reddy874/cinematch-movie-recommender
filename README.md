@@ -31,7 +31,7 @@ CineMatch uses **content-based filtering** to recommend movies similar to a user
 ## 🧠 How It Works
 
 ### 1. Data Preparation
-The [`tmdb_5000_movies.csv`](tmdb_5000_movies.csv) and [`tmdb_5000_credits.csv`](tmdb_5000_credits.csv) datasets are merged on `title`, and relevant columns are retained:
+The `tmdb_5000_movies.csv` and `tmdb_5000_credits.csv` datasets are merged on `title`, and relevant columns are retained:
 
 ```
 movie_id, title, overview, genres, keywords, cast, crew
@@ -73,18 +73,15 @@ Movie Recommendation/
 │   ├── Dashboard.png
 │   └── Recommendations.png
 │
-├── tmdb_5000_movies.csv          # Raw movie metadata
-├── tmdb_5000_credits.csv         # Raw cast & crew data
-│
 ├── movie_recommendation_train.py # Data preprocessing + model training script
 ├── movie_recommender_streamlit.py# Streamlit web application
 │
-├── movie_dict.pkl                # Processed movie data (pickled)
-├── similarity.pkl                # Precomputed cosine similarity matrix
-│
 ├── requirements.txt
+├── .gitignore
 └── README.md
 ```
+
+> **Note:** `tmdb_5000_movies.csv`, `tmdb_5000_credits.csv`, `movie_dict.pkl`, and `similarity.pkl` are **not included** in this repository due to file size limits on GitHub. See [Getting Started](#-getting-started) below for how to generate them locally.
 
 ---
 
@@ -113,19 +110,31 @@ git clone https://github.com/Gayathri-Reddy874/cinematch-movie-recommender.git
 cd cinematch-movie-recommender
 ```
 
-### 2. Install dependencies
+### 2. Download the dataset
+The raw CSV files are **not included** in this repo (GitHub file size limits). Download them from either source and place both files in the project root folder:
+
+- **Kaggle:** [TMDB 5000 Movie Dataset](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)
+- **TMDB:** [The Movie Database](https://www.themoviedb.org/)
+
+You should end up with:
+```
+tmdb_5000_movies.csv
+tmdb_5000_credits.csv
+```
+
+### 3. Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. (Optional) Re-train the model
-The pickled files are already included, so this step is optional unless you want to regenerate them from the raw CSVs:
+### 4. Generate the model files
+Run the training script to process the data and build the similarity matrix:
 ```bash
 python movie_recommendation_train.py
 ```
-This produces `movie_dict.pkl` and `similarity.pkl`.
+This generates `movie_dict.pkl` and `similarity.pkl` in the project root — both required by the Streamlit app and **not pushed to the repo** due to size.
 
-### 4. Run the Streamlit app
+### 5. Run the Streamlit app
 ```bash
 streamlit run movie_recommender_streamlit.py
 ```
