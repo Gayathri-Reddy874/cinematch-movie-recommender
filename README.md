@@ -132,7 +132,7 @@ Run the training script to process the data and build the similarity matrix:
 ```bash
 python movie_recommendation_train.py
 ```
-This generates `movie_dict.pkl` and `similarity.pkl` in the project root — both required by the Streamlit app and **not pushed to the repo** due to size.
+This generates `movie_dict.pkl` and `similarity.pkl` in the project root - both required by the Streamlit app and **not pushed to the repo** due to size.
 
 ### 5. Run the Streamlit app
 ```bash
