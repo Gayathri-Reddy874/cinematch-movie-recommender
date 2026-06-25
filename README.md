@@ -14,7 +14,7 @@ A content-based movie recommendation engine built on the **TMDB 5000 Movies Data
 
 ## 📌 Overview
 
-CineMatch uses **content-based filtering** to recommend movies similar to a user's selection. Instead of relying on user ratings or behavior (collaborative filtering), it analyzes each movie's *content* — overview, genres, keywords, cast, and director — to measure similarity between films and recommend the closest matches.
+CineMatch uses **content-based filtering** to recommend movies similar to a user's selection. Instead of relying on user ratings or behavior (collaborative filtering), it analyzes each movie's *content* - overview, genres, keywords, cast, and director - to measure similarity between films and recommend the closest matches.
 
 ---
 
