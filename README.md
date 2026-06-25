@@ -1,6 +1,6 @@
 # 🎬 CineMatch - Content-Based Movie Recommendation System
 
-A content-based movie recommendation engine built on the **TMDB 5000 Movies Dataset**, served through a custom-themed **Streamlit** web app. Pick any movie you love, and CineMatch instantly surfaces five similar titles — complete with posters fetched live from the OMDb API.
+A content-based movie recommendation engine built on the **TMDB 5000 Movies Dataset**, served through a custom-themed **Streamlit** web app. Pick any movie you love, and CineMatch instantly surfaces five similar titles - complete with posters fetched live from the OMDb API.
 
 <p align="center">
   <img src="Screenshots/Dashboard.png" alt="CineMatch Dashboard" width="850">
