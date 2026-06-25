@@ -153,8 +153,8 @@ The app will open automatically in your browser at `http://localhost:8501`.
 ## 📊 Dataset
 
 This project uses the publicly available **[TMDB 5000 Movie Dataset](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)**, consisting of:
-- `tmdb_5000_movies.csv` — budget, genres, overview, keywords, popularity, revenue, runtime, vote data, etc.
-- `tmdb_5000_credits.csv` — cast and crew information per movie
+- `tmdb_5000_movies.csv` - budget, genres, overview, keywords, popularity, revenue, runtime, vote data, etc.
+- `tmdb_5000_credits.csv` - cast and crew information per movie
 
 ---
 
