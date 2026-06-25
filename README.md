@@ -50,7 +50,7 @@ Raw JSON-like columns (`genres`, `keywords`, `cast`, `crew`) are parsed using `a
 Multi-word names are collapsed (e.g., `Science Fiction` → `ScienceFiction`) so they're treated as single tokens during vectorization.
 
 ### 3. Tag Construction
-All engineered features are concatenated into a single `tags` column — a bag-of-words representation of each movie — then lowercased into one string per film.
+All engineered features are concatenated into a single `tags` column - a bag-of-words representation of each movie - then lowercased into one string per film.
 
 ### 4. Vectorization & Similarity
 - **`CountVectorizer`** (scikit-learn) converts the `tags` text into 5,000-dimensional vectors, with English stop words removed.
