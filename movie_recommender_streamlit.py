@@ -3,6 +3,9 @@ import streamlit as st
 import pandas as pd
 import pickle
 import requests
+from dotenv import load_dotenv
+
+load_dotenv()  # loads variables from a local .env file, if present (no-op if missing)
 
 # ─────────────────────────────────────────────
 # PAGE CONFIG  (must be first Streamlit call)
@@ -243,7 +246,7 @@ div[data-baseweb="popover"] * {
 # ─────────────────────────────────────────────
 # Resolution order:
 #   1. Streamlit secrets (.streamlit/secrets.toml) — used for Streamlit Community Cloud
-#   2. Environment variable OMDB_API_KEY — used for local dev / other hosts
+#   2. Environment variable OMDB_API_KEY — set in shell, or loaded from a local .env file via load_dotenv()
 # The app never hardcodes a real key, so it's safe to make this repo public.
 
 def get_api_key():
