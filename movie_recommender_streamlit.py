@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import pandas as pd
 import pickle
@@ -238,9 +239,30 @@ div[data-baseweb="popover"] * {
 """, unsafe_allow_html=True)
 
 # ─────────────────────────────────────────────
-# OMDb API
+# OMDb API — secure key loading
 # ─────────────────────────────────────────────
-API_KEY = "61b14fc6"
+# Resolution order:
+#   1. Streamlit secrets (.streamlit/secrets.toml) — used for Streamlit Community Cloud
+#   2. Environment variable OMDB_API_KEY — used for local dev / other hosts
+# The app never hardcodes a real key, so it's safe to make this repo public.
+
+def get_api_key():
+    try:
+        return st.secrets["OMDB_API_KEY"]
+    except (KeyError, FileNotFoundError, st.errors.StreamlitSecretNotFoundError):
+        pass
+    return os.environ.get("OMDB_API_KEY")
+
+API_KEY = get_api_key()
+
+if not API_KEY:
+    st.error(
+        "⚠️ OMDb API key not found. Add it to `.streamlit/secrets.toml` "
+        "as `OMDB_API_KEY = \"your_key_here\"`, or set the `OMDB_API_KEY` "
+        "environment variable before running the app. Get a free key at "
+        "https://www.omdbapi.com/apikey.aspx"
+    )
+    st.stop()
 
 def fetch_poster(movie_title):
     url = f"http://www.omdbapi.com/?t={movie_title}&apikey={API_KEY}"
