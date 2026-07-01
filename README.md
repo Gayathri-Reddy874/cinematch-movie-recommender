@@ -7,8 +7,12 @@ A content-based movie recommendation engine built on the **TMDB 5000 Movies Data
 ![scikit--learn](https://img.shields.io/badge/scikit--learn-ML-orange.svg)
 ![License](https://img.shields.io/badge/License-Educational-lightgrey.svg)
 
-![CineMatch Dashboard](Screenshots/Dashboard.png)
-![CineMatch Recommendations](Screenshots/Recommendations.png)
+<p align="center">
+  <img src="Screenshots/Dashboard.png" alt="CineMatch Dashboard" width="850">
+</p>
+<p align="center">
+  <img src="Screenshots/Recommendations.png" alt="CineMatch Recommendations" width="850">
+</p>
 
 ---
 
