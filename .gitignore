@@ -1,1 +1,47 @@
+# --- Environment variables / secrets ---
+.env
+.env.*
+!.env.example
 
+# --- Datasets (not committed due to size) ---
+tmdb_5000_movies.csv
+tmdb_5000_credits.csv
+*.csv
+
+# --- Generated model artifacts ---
+movie_dict.pkl
+similarity.pkl
+*.pkl
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# --- Virtual environments ---
+venv/
+.venv/
+env/
+ENV/
+
+# --- Streamlit ---
+.streamlit/secrets.toml
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- IDE / editor ---
+.vscode/
+.idea/
+*.swp
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- Logs ---
+*.log
